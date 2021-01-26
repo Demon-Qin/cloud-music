@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "qin-input":"/components/input/input"
+  }
 }
