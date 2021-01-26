@@ -2,7 +2,9 @@
   "pages": [
     "pages/music/music",
     "pages/find/find",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "components/card/card",
+    "components/playlist/playlist"
   ],
   "requiredBackgroundModes": [
     "audio"

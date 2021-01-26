@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "qin-playlist":"/components/playlist/playlist"
+  },
+  "navigationBarTitleText":"CloudMusic"
+  
 }

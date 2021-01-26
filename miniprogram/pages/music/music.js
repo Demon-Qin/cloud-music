@@ -30,7 +30,43 @@ Page({
       {
         url: 'http://p1.music.126.net/j0gp3gBDRRoqIXxAs0v7oA==/109951165664720877.jpg?imageView&quality=89'
       },
-    ]
+    ],
+    playlist:[{
+      "id":"1001",
+      "playCount":1222822.6,
+      "name":"有些心动一开始便覆水难收",
+      "picUrl":"http://p2.music.126.net/RpzIkeUOZ4V7WBecytqH0Q==/109951165515305859.jpg?param=140y140"
+    },
+    {
+      "id":"1002",
+      "playCount":1286423.6,
+      "name":"Acoustic/沉浸柔情海洋",
+      "picUrl":"http://p4.music.126.net/6usq3fdV3_Ldu_3dwqz9yQ==/109951165595569687.jpg?param=140y140"
+    },
+    {
+      "id":"1003",
+      "playCount":963526.6,
+      "name":"「進撃の巨人」将悲伤和决意怀揣在心中",
+      "picUrl":"http://p4.music.126.net/lkYYScT5hEGOpqg6qqkePw==/109951165661080347.jpg?param=140y140"
+    },
+    {
+      "id":"1004",
+      "playCount":788324.6,
+      "name":"【一起吹晚风】",
+      "picUrl":"http://p3.music.126.net/swKlj43m9puewJ-YboeoSg==/109951165325068849.jpg?param=140y140"
+    },
+    {
+      "id":"1005",
+      "playCount":1006791.6,
+      "name":"你一定要在自己热爱的世界里闪闪发亮啊",
+      "picUrl":"http://p3.music.126.net/uesfHcJmZ23S3er_1mpeaw==/109951165621856219.jpg?param=140y140"
+    },
+    {
+      "id":"1006",
+      "playCount":873146.6,
+      "name":"放轻松 就当漫游地球 来和我一起听吧！",
+      "picUrl":"http://p3.music.126.net/pv2ya6nRsD0WD1TK4BybQg==/109951165216270090.jpg?param=140y140"
+    }]
   },
 
   /**
