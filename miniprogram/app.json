@@ -3,6 +3,7 @@
     "pages/music/music",
     "pages/find/find",
     "pages/profile/profile",
+    "pages/test/test",
     "components/card/card",
     "components/playlist/playlist",
     "components/input/input"
