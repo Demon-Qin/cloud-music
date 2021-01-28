@@ -4,6 +4,7 @@
     "pages/find/find",
     "pages/profile/profile",
     "pages/test/test",
+    "pages/musiclist/musiclist",
     "components/card/card",
     "components/playlist/playlist",
     "components/input/input"

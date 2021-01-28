@@ -2,6 +2,7 @@
   "usingComponents": {
     "qin-playlist":"/components/playlist/playlist"
   },
-  "navigationBarTitleText":"CloudMusic"
+  "navigationBarTitleText":"CloudMusic",
+  "enablePullDownRefresh": true
   
 }
