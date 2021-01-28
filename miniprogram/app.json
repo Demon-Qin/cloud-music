@@ -7,7 +7,9 @@
     "pages/musiclist/musiclist",
     "components/card/card",
     "components/playlist/playlist",
-    "components/input/input"
+    "components/musiclist/musiclist",
+    "components/input/input",
+    "pages/player/player"
   ],
   "requiredBackgroundModes": [
     "audio"

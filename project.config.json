@@ -72,6 +72,12 @@
           "pathName": "pages/test/test",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/musiclist/musiclist",
+          "pathName": "pages/musiclist/musiclist",
+          "query": "",
+          "scene": null
         }
       ]
     }
