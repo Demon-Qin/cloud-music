@@ -32,7 +32,7 @@
 .player-disc{
   width:592rpx;
   height:592rpx;
-  background: url('https://s-moses.oss-cn-hangzhou.aliyuncs.com/icon/disc.png') no-repeat center/contain;
+  background: url('http://first-bucket20201002.oss-cn-hangzhou.aliyuncs.com/img/img/logo/disc.png') no-repeat center/contain;
   position: absolute;
   left:50%;
   transform:translate(-50%,140rpx)
@@ -47,7 +47,7 @@
   position: absolute;
   top: -150rpx;
   left: 266rpx;
-  background:url('https://s-moses.oss-cn-hangzhou.aliyuncs.com/icon/needle.png') 
+  background:url('http://first-bucket20201002.oss-cn-hangzhou.aliyuncs.com/img/img/logo/needle.png') 
   no-repeat center/contain;
   transform: rotate(-15deg);
   transform-origin: 24rpx 10rpx;
@@ -63,7 +63,21 @@
   margin-top:-184rpx;
   margin-left: -184rpx;
 }
+.zhuan{
+  animation: disc 12s linear infinite;
+}
+@keyframes disc{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
 
+.ting{
+  animation-play-state: paused;
+}
 .control{
   position: absolute;
   bottom: 8%;
