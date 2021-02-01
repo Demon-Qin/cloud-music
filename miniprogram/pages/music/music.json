@@ -1,8 +1,11 @@
 {
   "usingComponents": {
-    "qin-playlist":"/components/playlist/playlist"
+    "qin-playlist":"/components/playlist/playlist",
+    "qin-navbar":"/components/navbar/navbar"
+
   },
-  "navigationBarTitleText":"CloudMusic",
-  "enablePullDownRefresh": true
+  "navigationStyle":"custom",
+  "enablePullDownRefresh": true,
   
+  "navigationBarTextStyle": "white"
 }

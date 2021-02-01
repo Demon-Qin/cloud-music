@@ -1,6 +1,7 @@
 // pages/music/music.js
 const MAX_LIMIT = 15
 const db = wx.cloud.database()
+
 Page({
 
   /**

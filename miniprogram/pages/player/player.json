@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "qin-progress-bar":"/components/progress-bar/progress-bar"
+  }
 }
