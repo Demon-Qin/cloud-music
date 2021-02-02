@@ -9,7 +9,8 @@
     "components/playlist/playlist",
     "components/musiclist/musiclist",
     "components/input/input",
-    "pages/player/player"
+    "pages/player/player",
+    "components/lyric/lyric"
   ],
   "requiredBackgroundModes": [
     "audio"

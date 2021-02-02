@@ -51,6 +51,11 @@
   no-repeat center/contain;
   transform: rotate(-15deg);
   transform-origin: 24rpx 10rpx;
+  transform: rotate(0deg);
+}
+
+.player.player-disc::after{
+  transform: rotate(0deg);
 }
 
 .player-img{
