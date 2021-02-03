@@ -58,32 +58,37 @@ Component({
              })
            }
          }
-         for(let i=0, len = lrcList.length; i<len; i++) {
-           if (currentTime <= lrcList[i].item) {
-             this.setData({
-               nowLyricIndex: i-1,
-               scrollTop:(i-1)*lyricHeight
-             })
-             break
-           }
-         }
+         for(let i=0,len=lrcList.length;i<len;i++){
+          if(currentTime<=lrcList[i].time){
+           
+            this.setData({
+              nowLyricIndex:i-1,
+              scrollTop:(i-1)*lyricHeight
+            })
+            console.log('&&&&&&&'+this.data.nowLyricIndex+"-----"+this.data.scrollTop)
+            break;
+          }
+        }
+         
     },
       _parseLyric(lyricSrc){
          let lines = lyricSrc.split('\n')
          let _lrcList = []
-          lines.forEach((elem) =>{
-            let time = elem.match(/\[(\d{2,}):(\d{2})(?:\.(\d{2,3}))?]/g)
-            if(time !=null) {
-              let lrc = elem.split(time)[1]
-              let timeReg = time[0].match(/(\d{2,}):(\d{2})(?:\.(\d{2,3}))?/)
-              console.log(timeReg)
-              let time2Seconds = parseInt(timeReg[1] * 60 +parseInt(timeReg[2]) + parseInt(timeReg[3]))/1000
-              _lrcList.push({
-                lrc,
-                time: time2Seconds,
-              })
-            }
+         lines.forEach(elem=>{
+          let time=elem.match(/\[(\d{2,}):(\d{2})(?:\.(\d{2,3}))?]/g)
+          if(time!=null){
+            let lrc=elem.split(time)[1]
+            let timeReg=time[0].match(/(\d{2,}):(\d{2})(?:\.(\d{2,3}))?/)
+            console.log(timeReg)
+            let time2Seconds=parseInt(timeReg[1])*60+parseInt(timeReg[2])+parseInt(timeReg[3])/1000
+            _lrcList.push({
+              lrc,
+              time:time2Seconds
             })
+          }
+        })
+            console.log('----------------------------------')
+            console.log(_lrcList)
            this.setData({
            lyrics :_lrcList
          })
