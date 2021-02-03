@@ -3,6 +3,7 @@
   display: flex;
   padding: 14rpx 20rpx;
   align-items: center;
+  
 }
 
 .musiclist-index {

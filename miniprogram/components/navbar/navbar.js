@@ -6,6 +6,9 @@ const menuButtonHeight = menuButtonInfo.height //胶囊高度
 const menuButtonTop = menuButtonInfo.top//胶囊距上边界距离
 
 Component({
+  options: {
+    multipleSlots: true
+  },
   /**
    * 组件的初始数据
    */

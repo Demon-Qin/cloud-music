@@ -1,4 +1,5 @@
 <!--pages/musiclist/musiclist.wxml-->
+
 <view wx:if="{{listInfo.coverImgUrl}}" class="detail-container"
       style="background: url({{listInfo.coverImgUrl}}) no-repeat top/cover">
 </view>
@@ -7,4 +8,22 @@
   <image src="{{listInfo.coverImgUrl}}" class="detail-img"></image>
   <view class="detail-name">{{listInfo.name}}</view>
 </view>
-<qin-musiclist musiclist = "{{musiclist}}" />
+<view class="share">
+  <view class="share-item">
+    <view class="share-item-item">
+    <view class="border">
+      <text class="iconfont icon-shoucang" style="margin-left:40rpx"></text>
+      {{collectionNum}}
+    </view>
+    <view class="border">
+      <text class="iconfont icon-pinglun"style="margin-left:40rpx"></text>
+        {{commentNum}}
+      </view>
+    <view >
+      <text class="iconfont icon-fenxiang"style="margin-left:40rpx"></text>
+        {{shareNum}}
+      </view>
+    </view>
+  </view>
+</view>
+<qin-musiclist  musiclist = "{{musiclist}}" />

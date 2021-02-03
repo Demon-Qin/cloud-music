@@ -1,4 +1,4 @@
 <!--miniprogram/components/input/input.wxml-->
       <view style=" width: 80%;height: 50rpx;border-radius:25%">
-        <input class="input"  auto-focus placeholder="输入想找的歌曲/作者"/>
+        <input class="input"  auto-focus placeholder="   输入想找的歌曲/作者"/>
       </view>

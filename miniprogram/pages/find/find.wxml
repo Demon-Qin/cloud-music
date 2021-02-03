@@ -1,14 +1,5 @@
 <!--pages/find/find.wxml-->
-<qin-input></qin-input>
-<!--  热搜榜  -->
-<view class="hotContainer">
-        <text class="title">热搜榜</text>
-        <!--    热搜列表    -->
-        <view class="hotList">
-                <view class="hotItem" wx:for="{{hotList}}" wx:key="searchWord">
-                    <text class="order">{{index + 1}}</text>
-                    <text>{{item.searchWord}}</text>
-                    <image wx:if="{{iconUrl}}" src="{{iconUrl}}" class="hotItem.iconImg"></image>
-                </view>
-        </view>
-</view>        
+<view class="row">
+<qin-input class="input"></qin-input> 
+<image src="http://first-bucket20201002.oss-cn-hangzhou.aliyuncs.com/img/img/logo/search.png" style="width:50rpx;height:50rpx;margin-left:-60rpx;"></image>
+</view>

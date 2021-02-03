@@ -7,6 +7,9 @@ Page({
   data: {
    musiclist: [],
    listInfo: {},
+   collectionNum: 51077,
+   commentNum:416,
+   shareNum: 714,
   },
 
   /**

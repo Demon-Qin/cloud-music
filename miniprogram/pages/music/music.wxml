@@ -1,9 +1,16 @@
 <!--pages/music/music.wxml-->
-<qin-navbar>
-  <view class="current-date">
-     <text>4月24日</text>
+<view class="nav">
+<qin-navbar id="bar">
+  <view slot="content" style="width:300rpx;height:70%;display:flex;" hidden="{{!isNavBar}}">
+    <input class="input" />
+    <image src="http://first-bucket20201002.oss-cn-hangzhou.aliyuncs.com/img/img/logo/search.png" style="width:50rpx;height:50rpx;margin-left:-60rpx;"></image>
   </view>
+  <view hidden="{{isNavBar}}">
+    <text>云音乐</text>
+  </view>
+
 </qin-navbar>
+
 <swiper indicator-dots="true" indicator-active-color="#d43c33" autoplay="true"
 interval="3000" duration="1000" class="swiper">
   <swiper-item wx:for="{{imgUrls}}">
@@ -15,4 +22,5 @@ interval="3000" duration="1000" class="swiper">
   <block wx:for="{{playlist}}" wx:key="_id">
     <qin-playlist playlist="{{item}}"></qin-playlist>
   </block>
+</view>
 </view>

@@ -1,1 +1,9 @@
 /* pages/find/find.wxss */
+.input{
+  margin-left:5%;
+  width:90%;
+  height:70rpx;
+  border-radius: 20rpx;
+  background-color: #e6e6e6;
+  color: #ffffff;
+   }

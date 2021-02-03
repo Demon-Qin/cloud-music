@@ -8,7 +8,7 @@
 .detail-mask {
   position: absolute;
   width: 100%;
-  height: 320rpx;
+  height: 400rpx;
   background-color: #333;
   top: 0;
   left: 0;
@@ -39,4 +39,36 @@
   font-size: 36rpx;
   line-height: 1.5;
   font-weight: 400;
+}
+.share{
+   width: 100%;
+   height: 80rpx;
+   align-items: center;
+   margin-bottom: 8%;
+   font-size:24rpx;
+}
+
+.share-item{
+  width: 70%;
+  height: 95%;
+  margin-left: 15%;
+  margin-top: 5%;
+  margin-bottom: 50%;
+  background-color: #FFFFFF;
+  border-radius: 50rpx;
+  padding-top: 3%;
+}
+.share-item-item{
+  width: 90%;
+  height: 65%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 2%;
+}
+.border{
+  width:34%;
+  height: 100%;
+  border-width: 3rpx;
+  border-right-style:solid;
+  border-color:#dedede;
 }

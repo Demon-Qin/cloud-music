@@ -33,6 +33,7 @@ Page({
         url: 'http://p1.music.126.net/j0gp3gBDRRoqIXxAs0v7oA==/109951165664720877.jpg?imageView&quality=89'
       },
     ],
+    isNavBar:false,
     playlist: []
      //   {
       //   "id":"1001",
@@ -127,6 +128,23 @@ Page({
   /**
    * 用户点击右上角分享
    */
+  showNavBar() {
+    wx.createSelectorQuery().select('#nav').boundingClientRect(rect=>{
+      console.log(rect)
+      }).exec()
+let height = rect.height
+if(height>54){
+  isNavBar=false;
+}else{
+  isNavBar=true;
+}
+  },
+  goToFind() {
+    wx.navigateTo({
+      url:`../../pages/find/find`
+    })
+  },
+
   onShareAppMessage: function () {},
   _getPlaylist() {
     wx.showLoading({
