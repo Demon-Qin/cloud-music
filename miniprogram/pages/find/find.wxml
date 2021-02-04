@@ -1,4 +1,9 @@
 <!--pages/find/find.wxml-->
+<qin-navbar >
+  <view slot="content" style="width:100rpx;height:70%;display:flex;color:#FFFFFF">
+    <text>发现</text>
+  </view>
+</qin-navbar>
 <view class="row">
 <qin-input class="input"></qin-input> 
 <image src="http://first-bucket20201002.oss-cn-hangzhou.aliyuncs.com/img/img/logo/search.png" style="width:50rpx;height:50rpx;margin-left:-60rpx;"></image>

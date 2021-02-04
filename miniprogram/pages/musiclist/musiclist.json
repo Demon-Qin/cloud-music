@@ -2,5 +2,5 @@
   "usingComponents": {
     "qin-musiclist": "/components/musiclist/musiclist"
   },
-  "navigationBarTitleText":"歌曲"
+  "navigationStyle":"custom"
 }

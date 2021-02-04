@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "qin-input":"/components/input/input"
-  }
+    "qin-input":"/components/input/input",
+    "qin-navbar":"/components/navbar/navbar"
+  },
+  "navigationStyle":"custom"
 }

@@ -1,7 +1,6 @@
 // pages/music/music.js
 const MAX_LIMIT = 15
 const db = wx.cloud.database()
-
 Page({
 
   /**
@@ -128,20 +127,26 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  showNavBar() {
+  _showNavBar() {
     wx.createSelectorQuery().select('#nav').boundingClientRect(rect=>{
       console.log(rect)
       }).exec()
-let height = rect.height
-if(height>54){
-  isNavBar=false;
+let top = rect.top
+if(top < -50){
+  this.setData({
+    isNavBar:ture
+  })
+  
 }else{
-  isNavBar=true;
+
+  this.setData({isNavBar:false})
 }
   },
-  goToFind() {
-    wx.navigateTo({
-      url:`../../pages/find/find`
+  goToFind() { 
+    console.log("调用跳转方法")
+    wx.switchTab({
+     
+      url:'../../pages/find/find'
     })
   },
 

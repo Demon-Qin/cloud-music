@@ -1,15 +1,17 @@
-// pages/musiclist/musiclist.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-   musiclist: [],
-   listInfo: {},
-   collectionNum: 51077,
-   commentNum:416,
-   shareNum: 714,
+  //歌曲列表
+  musiclist: [],
+  //歌单信息（只取了封面和歌单名称）
+  listInfo: {},
+  opacity: 0,
+  title: '歌单',
+  statusBarHeight: 0,
   },
 
   /**
@@ -17,8 +19,11 @@ Page({
    */
   onLoad: function (options) {
     console.log(options)
+    this.setData({
+      statusBarHeight: app.globalData.sysInfo.statusBarHeight,
+    })
     wx.showLoading({
-      title: 'Loading',
+      title: '加载中',
     })
     wx.cloud.callFunction({
       name: 'music',
@@ -35,17 +40,50 @@ Page({
         listInfo: {
           coverImgUrl: pl.coverImgUrl,
           name: pl.name,
+          coverImgUrl: pl.coverImgUrl,
+          name: pl.name,
+          avatarUrl: pl.creator.avatarUrl,
+          nickname: pl.creator.nickname,
+          subscribedCount: pl.subscribedCount,
+          commentCount: pl.commentCount,
+          shareCount: pl.shareCount,
+          description: pl.description,
+
         }
       })
+      console.log(this.data.listInfo)
       this._setMusiclist()
       wx.hideLoading()
     })
   },
-   _setMusiclist() {
-      wx.setStorageSync('musiclist', this.data.musiclist)
-    
-    
-   },
+
+  _setMusiclist() {
+    //将本歌单的歌曲列表存入本地储存
+    wx.setStorageSync('musiclist', this.data.musiclist)
+  },
+  back() {
+    wx.navigateBack({
+      delta: 1,
+    })
+  },
+  onPageScroll(e) {
+    let scrollTop = e.scrollTop
+    console.log(scrollTop)
+    if (scrollTop > 44){
+      this.setData({
+        title: this.data.listInfo.name,
+      })
+    }else {
+      this.setData({
+        title: '歌单',
+    })
+      }
+      let _opacity = (scrollTop / 100 > 1)? 1 : scrollTop / 100
+      this.setData({
+      opacity: _opacity
+      })
+      },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

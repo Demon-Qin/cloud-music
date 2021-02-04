@@ -1,29 +1,71 @@
 <!--pages/musiclist/musiclist.wxml-->
-
-<view wx:if="{{listInfo.coverImgUrl}}" class="detail-container"
-      style="background: url({{listInfo.coverImgUrl}}) no-repeat top/cover">
+<!-- 默认导航 -->
+<view class='nav' style='padding-top:{{ statusBarHeight + 44}}px;opacity:{{1-opacity}};'>
+  <text class='iconfont icon-iconfont-left1' bind:tap="back"></text>
+  <text class="title">{{title}}</text>
 </view>
-<view class="detail-mask"></view>
-<view class="detail-info">
-  <image src="{{listInfo.coverImgUrl}}" class="detail-img"></image>
-  <view class="detail-name">{{listInfo.name}}</view>
+<!-- 切换导航 -->
+<view class="nav" style="padding-top:{{ statusBarHeight + 44}}px;opacity:{{opacity}};">
+<!-- 判断是否有封面图，有就作为顶部view区域的背景图 -->
+<view wx:if="{{listInfo.coverImgUrl}}" class='blur-bg'
+  style='background: url({{listInfo.coverImgUrl}}) no-repeat center/cover; z-index:11'>
 </view>
-<view class="share">
+<!-- 遮罩层 -->
+<view class='mask' style="z-index:10"></view>
+<text class='iconfont icon-iconfont-left1' bind:tap="back"></text>
+<text class="title ellipsis">{{title}}</text>
+</view>
+<!-- 歌单信息，左图右文 -->
+<view class='info-container' style="padding-top:{{ statusBarHeight + 44}}px;">
+  <view wx:if="{{listInfo.coverImgUrl}}" class='blur-bg'
+    style='background: url({{listInfo.coverImgUrl}}) no-repeat center/cover;z-index:101'>
+  </view>
+  <view class='mask' style="z-index:100"></view>
+  
+  <view class="detail-info" style="z-index:102">
+    <view class="left">
+      <image src="{{listInfo.coverImgUrl}}" class="detail-img"></image>
+    </view>
+    <view class="right">
+      <view class="detail-name ellipsis">{{listInfo.name}}</view>
+      <view class="user-info">
+        <image src="{{listInfo.avatarUrl}}"></image>
+        <text class="info">{{listInfo.nickname}}</text>
+      </view>
+    <view class="description ellipsis">
+      <text wx:if="{{listInfo.description!=null}}">{{listInfo.description}}</text>
+    </view>
+  </view>
+</view>
+</view>
+  <!-- 收藏、评论、分享 -->
+  <view class="share">
   <view class="share-item">
     <view class="share-item-item">
     <view class="border">
       <text class="iconfont icon-shoucang" style="margin-left:40rpx"></text>
-      {{collectionNum}}
+      {{listInfo.subscribedCount}}
     </view>
     <view class="border">
       <text class="iconfont icon-pinglun"style="margin-left:40rpx"></text>
-        {{commentNum}}
+        {{listInfo.commentCount}}
       </view>
     <view >
       <text class="iconfont icon-fenxiang"style="margin-left:40rpx"></text>
-        {{shareNum}}
+        {{listInfo.shareCount}}
       </view>
     </view>
   </view>
 </view>
-<qin-musiclist  musiclist = "{{musiclist}}" />
+
+
+
+
+<!-- 使用歌曲列表组件 -->
+<scroll-view class="content">
+  <qin-musiclist musiclist="{{musiclist}}"></qin-musiclist>
+  <qin-musiclist musiclist="{{musiclist}}"></qin-musiclist>
+  <qin-musiclist musiclist="{{musiclist}}"></qin-musiclist>
+</scroll-view>
+
+<view class="bottom"> </view>

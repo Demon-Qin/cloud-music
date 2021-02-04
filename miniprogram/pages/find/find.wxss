@@ -1,5 +1,6 @@
 /* pages/find/find.wxss */
 .input{
+  margin-top: 150rpx;
   margin-left:5%;
   width:90%;
   height:70rpx;
