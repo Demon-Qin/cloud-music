@@ -38,10 +38,10 @@ border-color: #ffffff;
  }
 
 .nav {
-   
-   color: #ffffff;
-   background: #654ea3;  /* fallback for old browsers */     
-    background: -webkit-linear-gradient(to right, rgb(101, 78, 163), rgb(234, 175, 200));  /* Chrome 10-25, Safari 5.1-6 */      
-    background: linear-gradient(to right, rgb(101, 78, 163), rgb(234, 175, 200)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */      
+   background-color: #fad9e7;
+   color: #a79797;
+  /*  background: #654ea3;    
+    background: -webkit-linear-gradient(to right, rgb(101, 78, 163), rgb(234, 175, 200));  
+    background: linear-gradient(to right, rgb(101, 78, 163), rgb(234, 175, 200));  */
    }
 

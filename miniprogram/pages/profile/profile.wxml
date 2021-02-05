@@ -1,2 +1,6 @@
 <!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
+<qin-navbar>
+  <view slot="content" style="width:100rpx;height:70%;display:flex;color:#FFFFFF">
+    <text>我的</text>
+  </view>
+</qin-navbar>

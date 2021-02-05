@@ -4,7 +4,13 @@
     <text>发现</text>
   </view>
 </qin-navbar>
-<view class="row">
-<qin-input class="input"></qin-input> 
-<image src="http://first-bucket20201002.oss-cn-hangzhou.aliyuncs.com/img/img/logo/search.png" style="width:50rpx;height:50rpx;margin-left:-60rpx;"></image>
+
+<view class="header">
+  <view class="left" bindtap="onPublish">
+    <i class="iconfont icon-bianji"></i>
+  </view>
+  <view class="right">
+    <qin-input bind:search="onSearch"/>
+  </view>
 </view>
+

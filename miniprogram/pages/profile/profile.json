@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "qin-navbar":"/components/navbar/navbar"
+  },
+  "navigationStyle":"custom"
 }
