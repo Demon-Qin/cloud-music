@@ -10,7 +10,8 @@
     "components/musiclist/musiclist",
     "components/input/input",
     "pages/player/player",
-    "components/lyric/lyric"
+    "components/lyric/lyric",
+    "pages/publish/publish"
   ],
   "requiredBackgroundModes": [
     "audio"

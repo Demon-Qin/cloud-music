@@ -1,0 +1,5 @@
+<qin-navbar >
+  <view slot="content" style="width:100rpx;height:70%;display:flex;color:#FFFFFF">
+    <text>发布</text>
+  </view>
+</qin-navbar>

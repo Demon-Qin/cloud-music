@@ -1,5 +1,5 @@
 .nav {
-  opacity:0.7;
+  opacity:0.8;
   position: fixed;
   top: 0;
   left: 0;

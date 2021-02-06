@@ -6,11 +6,14 @@
 </qin-navbar>
 
 <view class="header">
-  <view class="left" bindtap="onPublish">
+  <view class="left" bind:tap="onPublish">
     <i class="iconfont icon-bianji"></i>
   </view>
   <view class="right">
     <qin-input bind:search="onSearch"/>
   </view>
 </view>
-
+<scroll-view class="container" scroll-y>
+    <qin-login modalShow="{{modalShow}}" bind:loginsuccess="onLoginSuccess" bind:loginfail="onLoginFail">
+    </qin-login>
+</scroll-view> 

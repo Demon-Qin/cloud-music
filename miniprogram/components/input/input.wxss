@@ -29,7 +29,7 @@
         -ms-flex: 0 0 30%;
             flex: 0 0 30%;
     display: inline;
-    background: #4e96a7;
+    background:#cb8bf3;
     color: #fff;
     font-size: 26rpx;
   }

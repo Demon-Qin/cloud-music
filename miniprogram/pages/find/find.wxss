@@ -11,23 +11,33 @@
     position: absolute;
     height:100rpx;
     width: 100%;
-    background-color:	#7B68EE;
+    background-color:	#cdc7f0;
     margin-top: 170rpx;
+    z-index: 1;
   }
   .left{
     display: flex;
-    width: 40rpx;
-    height: 65rpx;
+    width: 100rpx;
+    height:100%;
+    padding-top: 20rpx;
+    padding-left: 20rpx;
   }
   .icon-bianji{
-    position: absolute;
-    top: 15rpx;
-    left: 30rpx;
+    width: 20rpx;
+    height: 20rpx;
     font-size: 60rpx;
+    color: #494949;
   }
   .right{
     position: absolute;
     margin-left: 100rpx;
     margin-right:20rpx;
     top: 15rpx;
+  }
+  .container {
+    margin-top: 10rpx;
+    box-sizing: border-box;
+    height: 100vh;
+  
+    z-index: -10;
   }
