@@ -13,7 +13,6 @@ Page({
   },
   onPublish() {
     //获取用户的当前设置。返回值中只会出现小程序已经向用户请求过的权限，根据是否具有scop.userInfo属性，判断用户是否授权
-    console.log("11111111111111111111111")
     wx.getSetting({
       success: (res) => {
         console.log('当前设置' + JSON.stringify(res))
@@ -39,7 +38,7 @@ Page({
     const detail = event.detail
     console.log(detail)
     wx.navigateTo({
-      url: '../publish/publish',
+      url: `../publish/publish?nickName=${detail.nickName}&avatarUrl=${detail.avatarUrl}`,
     })
   },
   onLoginFail() {

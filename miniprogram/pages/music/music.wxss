@@ -37,11 +37,12 @@ border-width: 1rpx;
 border-color: #ffffff;
  }
 
-.nav {
+.page {
    background-color: #fad9e7;
    color: #a79797;
   /*  background: #654ea3;    
     background: -webkit-linear-gradient(to right, rgb(101, 78, 163), rgb(234, 175, 200));  
     background: linear-gradient(to right, rgb(101, 78, 163), rgb(234, 175, 200));  */
    }
+
 

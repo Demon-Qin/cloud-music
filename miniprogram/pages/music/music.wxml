@@ -1,10 +1,10 @@
 <!--pages/music/music.wxml-->
-<view class="nav">
+<view class="page">
 <qin-navbar id="bar">
-  <view slot="content" style="width:300rpx;height:70%;display:flex;" hidden="{{!isNavBar}}">
+  <view slot="content" style="width:300rpx;height:70%;display:flex;" >
     <view class="input" bind:tap="goToFind"></view>
     <image src="http://first-bucket20201002.oss-cn-hangzhou.aliyuncs.com/img/img/logo/search.png" style="width:50rpx;height:50rpx;margin-left:-60rpx;"></image>
-  </view>
+  </view>  
 </qin-navbar>
 
 <swiper indicator-dots="true" indicator-active-color="#d43c33" autoplay="true"

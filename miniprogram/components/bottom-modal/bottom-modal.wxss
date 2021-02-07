@@ -21,7 +21,7 @@
   background-color: #f8f8f8;
 }
 
-.modal .panel .icon-guanbi {
+.modal .panel .icon-close {
   position: absolute;
   right: 10rpx;
   top: 10rpx;

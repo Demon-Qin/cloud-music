@@ -35,9 +35,7 @@
     top: 15rpx;
   }
   .container {
-    margin-top: 10rpx;
+    margin-top: 100rpx;
     box-sizing: border-box;
     height: 100vh;
-  
-    z-index: -10;
   }
