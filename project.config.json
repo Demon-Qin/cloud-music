@@ -84,6 +84,12 @@
           "pathName": "pages/publish/publish",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/find/find",
+          "pathName": "pages/find/find",
+          "query": "",
+          "scene": null
         }
       ]
     }

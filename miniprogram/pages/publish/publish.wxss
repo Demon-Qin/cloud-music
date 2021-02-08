@@ -1,6 +1,7 @@
 /* miniprogram/pages/publish/publish.wxss */
+
 .container {
-  margin-top: 30rpx;
+  margin-top: 170rpx;
   height: 1600rpx;
   padding: 20rpx;
   background-color:#e7e7e7 ;
@@ -40,7 +41,7 @@
   height: 100%;
 }
 
-.container .image-list .image-wrap .icon-shanchu {
+.container .image-list .image-wrap .icon-shanchu2 {
   position: absolute;
   top: 0;
   right: 0;
@@ -56,13 +57,13 @@
 }
 
 .selectphoto {
-  margin-left: -350rpx;
+  /* margin-left: -350rpx; */
   border: 2rpx dashed #ccc;
   position: relative;
   background-color: #f8f8f8;
 }
 
-.selectphoto .icon-tianjiatupian {
+.selectphoto .img {
   position: absolute;
   top: 50%;
   left: 50%;

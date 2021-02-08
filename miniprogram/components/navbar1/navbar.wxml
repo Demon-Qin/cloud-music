@@ -4,7 +4,8 @@
       class="capsule-box" 
       style="height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px; bottom:{{menuBotton}}px;left:{{menuRight}}px;"
     >
-    <slot name="content"></slot>
+    <slot name="content">
+    </slot>
     
     </view>
   </view>

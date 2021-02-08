@@ -13,7 +13,18 @@
     <qin-input bind:search="onSearch"/>
   </view>
 </view>
-<scroll-view class="container" scroll-y>
-    <qin-login modalShow="{{modalShow}}" bind:loginsuccess="onLoginSuccess" bind:loginfail="onLoginFail">
+
+<view class="container">
+<block wx:for="{{blogList}}" wx:key="_id">
+  <view class="blog-panel">
+  <qin-blog-card blog="{{item}}" data-blogid="{{item._id}}" bind:tap="goComment" /> 
+  </view>
+</block>
+</view>
+
+    <qin-login 
+    modalShow="{{modalShow}}" 
+    bind:loginsuccess="onLoginSuccess" 
+    bind:loginfail="onLoginFail">
     </qin-login>
-</scroll-view> 
+

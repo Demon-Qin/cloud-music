@@ -35,7 +35,10 @@
     top: 15rpx;
   }
   .container {
-    margin-top: 100rpx;
-    box-sizing: border-box;
-    height: 100vh;
-  }
+    margin-top: 300rpx;
+     width: 100%;
+    }
+    
+    .blog-panel {
+      margin-bottom: 20rpx;
+    }

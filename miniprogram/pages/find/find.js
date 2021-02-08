@@ -3,13 +3,42 @@ Page({
   data: {
     //控制弹出层是否显示
     modalShow: false,
+    //博客数组
+    blogList:[],
   },
   onSearch(event) {
     keyword =event.detail.keyword
     console.log(keyword)
   },
   onLoad: function (options) {
+    this._loadBlogList()
     console.log('2123')
+  },
+  _loadBlogList(start = 0) {
+     wx.showLoading({
+       title: '数据加载中',
+     })
+     wx.cloud.callFunction({
+      name: 'blog',
+      data: {
+        start,
+        count: 10,
+        $url: 'list',
+      }
+    }).then((res) =>{
+      console.log(res)
+      this.setData({
+        blogList: this.data.blogList.concat(res.result)
+      })
+      wx.hideLoading()
+      wx.stopPullDownRefresh()
+    })
+  },
+  onPullDownRefresh: function () {
+      this.setData({
+        blogList: []
+      })
+      this._loadBlogList(0)
   },
   onPublish() {
     //获取用户的当前设置。返回值中只会出现小程序已经向用户请求过的权限，根据是否具有scop.userInfo属性，判断用户是否授权
