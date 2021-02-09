@@ -1,0 +1,31 @@
+<!--components/blog-ctrl/blog-ctrl.wxml-->
+<view class="ctrl">
+  <!-- 评论和文字 -->
+  <view class="ctrl-item" bind:tap="onComment">
+    <i class="iconfont icon-pinglun"></i>
+    <text class="item">评论</text>
+  </view>
+  <view class="ctrl-item" bind:tap="onComment">
+    <button open-type="share" data-blogid="{{blogId}}" data-blog="{{blog}}" class="share-btn"></button>
+    <i class="iconfont icon-fenxiang"></i>
+    <text class="item" >分享</text>
+  </view>
+</view>
+  <!-- 授权登录组件 -->
+  <qin-login modalShow="{{loginShow}}" bind:loginsuccess="onLoginsuccess"
+  bind:loginfail="onLoginfail"></qin-login>
+
+  <!-- 底部弹窗 -->
+  <qin-bottom-modal modalShow="{{modalShow}}" >
+    <view slot="modal-content">
+      <textarea 
+      bindinput="onInput"
+      name="content" 
+      class="comment-content"
+      placeholder="写评论" 
+      value="{{content}}"
+      fixed="true"></textarea>
+      <view class="send" bind:tap="onSend">发送</view>
+    </view>
+  </qin-bottom-modal>
+

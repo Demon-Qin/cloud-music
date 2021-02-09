@@ -35,7 +35,7 @@
     top: 15rpx;
   }
   .container {
-    margin-top: 300rpx;
+    margin-top: 280rpx;
      width: 100%;
     }
     

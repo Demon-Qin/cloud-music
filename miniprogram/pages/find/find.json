@@ -3,7 +3,8 @@
     "qin-input":"/components/input/input",
     "qin-navbar":"/components/navbar/navbar",
     "qin-login": "/components/login/login",
-    "qin-blog-card":"/components/blog-card/blog-card"
+    "qin-blog-card":"/components/blog-card/blog-card",
+    "qin-blog-ctrl":"/components/blog-ctrl/blog-ctrl"
   },
   "navigationStyle":"custom"
 }

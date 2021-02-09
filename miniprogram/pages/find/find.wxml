@@ -18,6 +18,7 @@
 <block wx:for="{{blogList}}" wx:key="_id">
   <view class="blog-panel">
   <qin-blog-card blog="{{item}}" data-blogid="{{item._id}}" bind:tap="goComment" /> 
+  <qin-blog-ctrl blogId="{{item._id}}" blog="{{item}}"></qin-blog-ctrl>
   </view>
 </block>
 </view>

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "qin-login":"/components/login/login",
+    "qin-bottom-modal":"/components/bottom-modal/bottom-modal"
+  }
+}

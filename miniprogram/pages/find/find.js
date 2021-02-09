@@ -7,7 +7,12 @@ Page({
     blogList:[],
   },
   onSearch(event) {
+    console.log(event.detail.keyword)
+    this.setData({
+      blogList:[]
+    })
     keyword =event.detail.keyword
+    this._loadBlogList(0)
     console.log(keyword)
   },
   onLoad: function (options) {
@@ -21,6 +26,7 @@ Page({
      wx.cloud.callFunction({
       name: 'blog',
       data: {
+        keyword,
         start,
         count: 10,
         $url: 'list',
@@ -102,13 +108,6 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
 
   },
 
