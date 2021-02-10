@@ -11,7 +11,8 @@
     "components/input/input",
     "pages/player/player",
     "components/lyric/lyric",
-    "pages/publish/publish"
+    "pages/publish/publish",
+    "pages/blog-detail/blog-detail"
   ],
   "requiredBackgroundModes": [
     "audio"

@@ -6,6 +6,11 @@ Page({
     //博客数组
     blogList:[],
   },
+  goDetail(event) {
+    wx.navigateTo({
+      url: '../../pages/blog-detail/blog-detail?blogId=' + event.target.dataset.blogid,
+    })
+  },
   onSearch(event) {
     console.log(event.detail.keyword)
     this.setData({
@@ -68,6 +73,7 @@ Page({
       }
     })   
   },
+  
   onLoginSuccess(event) {
     console.log('>>>>>' + event)
     const detail = event.detail
@@ -82,46 +88,4 @@ Page({
       content: ''
     })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

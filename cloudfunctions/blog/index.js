@@ -33,5 +33,22 @@ app.router('list', async(ctx, next) =>{
   })
   ctx.body = blogList
 })
+
+//详情查询（同时评论查询）
+app.router('detail',async(ctx,next)=> {
+  let blogId = event.blogId
+  const blog = await blogCollection.aggregate().match({
+    _id:blogId
+  }).lookup({
+    from:'blog-comment',
+    localField:'_id',
+    foreignField:'blogId',
+    as:'commentList'
+  }).end()
+  ctx.body = blog
+})
+
+
+
   return app.serve()
 }

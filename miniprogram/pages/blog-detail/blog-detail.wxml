@@ -1,0 +1,26 @@
+<!--miniprogram/pages/blog-detail/blog-detail.wxml-->
+<qin-navbar>
+  <view slot="content" style="width:800rpx;height:70%;color:#FFFFFF">
+    <text class='iconfont icon-iconfont-left1' style="margin-left:40rpx;color: #fff;z-index:1000" bind:tap="back"></text> <text style="margin-left:260rpx;">详情</text>
+  </view>
+</qin-navbar>
+<view class="blog-card">
+    <qin-blog-card blog="{{blog}}"></qin-blog-card>
+</view>
+<view class="tab">评论列表</view>
+<!-- 评论数组 -->
+<view>
+<block wx:for="{{commentList}}" wx:key="_id">
+  <view class="comment">
+    <view class="comment-title">
+      <image class="comment-avatar" src="{{item.avatarUrl}}"></image>
+      <text class="comment-nickname">{{item.nickName}}</text>
+    </view>
+    <view class="comment-content">{{item.content}}</view>
+    <view class="comment-time">{{item.createTime}}</view>
+  </view>
+</block>
+</view>
+<view class="blog-ctrl">
+   <qin-blog-ctrl blogId="{{blog._id}}" bind:refreshCommentList="_getBlogDetail"></qin-blog-ctrl>
+</view>

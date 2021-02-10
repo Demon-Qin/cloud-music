@@ -9,7 +9,7 @@ const TcbRouter = require('tcb-router')
 //引入axios
 const axios = require('axios')
 //定义基础URL
-const BASE_URL = 'https://cloudmusic.cn.utools.club'
+const BASE_URL = 'https://zyq-cloudmusic.cn.utools.club'
 
 // 云函数入口函数
 exports.main = async (event, context) => {

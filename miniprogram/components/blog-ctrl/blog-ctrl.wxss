@@ -33,7 +33,7 @@ page {
 
 .share-btn {
   width: 100rpx;
-  background-color: #fdfcfc;
+  background-color: #fcfafa;
   color: #000119;
   border: none;
   display: flex;
@@ -49,12 +49,15 @@ page {
 }
 
 .send {
+  opacity: 0.7;
   display: block;
   width: 180rpx;
   height: 64rpx;
   line-height: 64rpx;
-  background: #5F95A5;
-  color: #000458;
+  background: #fc5c7d;  
+  background: -webkit-linear-gradient(to right, rgb(252, 92, 125), rgb(106, 130, 251));
+  background: linear-gradient(to right, rgb(252, 92, 125), rgb(106, 130, 251));
+  color: #f8f8fa;
   font-size: 32rpx;
   border-radius: 10rpx;
   position: absolute;
