@@ -1,0 +1,7 @@
+<!--miniprogram/pages/play-history/play-history.wxml-->
+<qin-navbar>
+  <view slot="content" style="width:800rpx;height:70%;color:#FFFFFF">
+    <text class='iconfont icon-iconfont-left1' style="margin-left:40rpx;color: #fff;z-index:1000" bind:tap="back"></text> <text style="margin-left:230rpx;">最近播放</text>
+  </view>
+</qin-navbar>
+<qin-musiclist musiclist="{{musiclist}}" style="margin-top:170rpx"></qin-musiclist>

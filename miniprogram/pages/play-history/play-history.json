@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "qin-navbar":"/components/navbar1/navbar",
+    "qin-musiclist":"/components/musiclist/musiclist"
+  },
+  "navigationStyle":"custom"
+}

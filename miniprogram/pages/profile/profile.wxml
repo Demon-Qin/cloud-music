@@ -1,6 +1,26 @@
-<!--pages/profile/profile.wxml-->
-<qin-navbar>
-  <view slot="content" style="width:100rpx;height:70%;display:flex;color:#FFFFFF">
-    <text>我的</text>
+<view class="profile-header">
+<view class="avatar">
+<open-data type="userAvatarUrl"></open-data>
+</view>
+<open-data type="userNickName" class="nickname  "></open-data>
+</view>
+<view class="nav">
+  <view class="nav-item">
+    <navigator class="content" hover-class="none" url="/pages/play-history/play-history">
+      <text class="text">最近播放</text>
+      <i class="iconfont icon-right"></i>
+    </navigator>
   </view>
-</qin-navbar>
+  <view class="nav-item">
+    <navigator class="content" hover-class="none" url="/pages/profile-blog/profile-blog">
+      <text class="text">我的博客</text>
+      <i class="iconfont icon-right"></i>
+    </navigator>
+  </view>
+<view class="nav-item">
+  <view class="content" bind:tap="onTapQrCode">
+    <text class="text">小程序</text>
+    <i class="iconfont icon-right"></i>
+  </view>
+</view>
+</view>

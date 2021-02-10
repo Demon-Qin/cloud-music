@@ -48,6 +48,15 @@ app.router('detail',async(ctx,next)=> {
   ctx.body = blog
 })
 
+//在云端取得微信上下文，从中可以获得openid
+const wxContext = cloud.getWXContext()
+app.router('getListByOpenid',async (ctx,next) => {
+  ctx.body = await blogCollection.where({
+    _openid:wxContext.OPENID
+  }).skip(event.start).limit(event.count).orderBy('createTime','desc').get().then((res)=>{
+    return res.data
+  })
+})
 
 
   return app.serve()

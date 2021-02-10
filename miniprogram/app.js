@@ -37,9 +37,22 @@ App({
         traceUser: true,
       })
     }
+    this.getOpenid()
     this.globalData = {
       sysInfo: this.getSysInfo(),
+      openid:-1,
     }
+  },
+  getOpenid() {
+     wx.cloud.callFunction({
+       name:'login'
+     }).then((res)=>{
+       const openid = res.result.openid
+       this.globalData.openid = openid
+       if(wx.getStorageSync(openid) == '') {
+         wx.setStorageSync(openid, [])
+       }
+     })
   },
   getSysInfo:function() {
     //获取系统信息
